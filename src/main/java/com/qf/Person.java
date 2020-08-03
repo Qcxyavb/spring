@@ -43,4 +43,12 @@ public class Person {
         System.out.println("success");
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", info='" + info + '\'' +
+                '}';
+    }
 }

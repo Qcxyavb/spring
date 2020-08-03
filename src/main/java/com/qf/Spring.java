@@ -7,6 +7,7 @@ public class Spring {
     public static void main(String[] args) {
         ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         Person p = (Person)ac.getBean("person");
-        p.test();
+        System.out.println(p.toString());
+
     }
 }
