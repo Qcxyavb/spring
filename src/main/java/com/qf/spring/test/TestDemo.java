@@ -7,10 +7,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestDemo {
     public static void main(String[] args) {
-        ApplicationContext context  = new ClassPathXmlApplicationContext("classpath:applicationContext-annotation.xml");
-        UserServlet bean = context.getBean(UserServlet.class);
-        Person person = bean.get(1);
-        System.out.println(person);
+        System.out.println(test(1));
+        System.out.println(test(1.2588));
+        System.out.println(test("afsgdf"));
 
+    }
+
+    public static <T> T test(T i){
+        return i;
     }
 }
