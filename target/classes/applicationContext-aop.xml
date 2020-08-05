@@ -14,7 +14,7 @@
         <bean id="studentAdvice" class="com.qf.aop.StudentAdvice"/>
         <aop:config>
             <!--配置切入点-->
-            <aop:pointcut id="studentCutPoint" expression="execution(* com.qf.aop(..))"/>
+            <aop:pointcut id="studentCutPoint" expression="execution(* com.qf.aop.Student.study(..))"/>
             <!--配置切面-->
             <aop:aspect ref="studentAdvice">
                 <aop:before method="before" pointcut-ref="studentCutPoint"/>
